@@ -1,44 +1,39 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('layout.app')
+
+@section('content')
+<!-- Contenido principal de la sección -->
+<div class="container mt-4">
+    <!-- Imagen tipo banner -->
+<!-- Imagen tipo banner -->
+<div class="plantas-hero">
+    <div class="hero-section overlay">
+        <h1 class="fw-bold"></h1>
+    </div>
+</div>
+
+</div>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Biología</li>
+        </ol>
+    </nav>
+    
+
+    <!-- Título principal -->
+    <h1 class="fw-bold">Plantas</h1>
+
+    <!-- Descripción -->
+    <p class="lead">
+        Te explicamos todo sobre las plantas, su clasificación, partes, reproducción y otras características.
+        Además, qué es la fotosíntesis.
+    </p>
 
 
-  <h1>Formulario Curso</h1>
-
-    <form action="{{route('roles.store')}}" method="POST" enctype="multipart/form-data">
-
-    @csrf
-
-    <label>
-        Ingrese el nombre del rol:
-        <br>
-        <input type="text" name="name">
-    </label>
-    <br>
-
-    <label>
-        Ingrese la descripcion del rol:
-        <br>
-        <input type="text" name="description">
-    </label>
-    <br>
+  
+</div>
 
 
-    <label>
-        Ingrese el estado :
-        <br>
-        <input type="tex" name="state">
-    </label>
-    <br><br>
-
-    <button type="submit">Enviar Formulario:</button>
-    </form>
-
-
-</body>
-</html>
+    @endsection

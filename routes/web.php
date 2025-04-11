@@ -3,6 +3,6 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 
-
-Route::get('/formularioRol',[RoleController::class,'listarrol']);
+//listarrol
+Route::get('/formularioRol',[LoginController::class,'create']);
 Route::post('/crearCurso',[RoleController::class,'store'])->name('roles.store');
