@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('teacher');
             $table->string('super-admin');
 
-            
+
             $table->unsignedBigInteger('roles_id')->unique();
- 
-            $table->unsignedBigInteger('user_id')->unique();
+
+            $table->unsignedBigInteger('userm_id')->unique();
             //relacion uno a muchos con la tabla de roles
             $table->foreign('roles_id')
             ->references('id')
@@ -30,16 +30,16 @@ return new class extends Migration
             ->onDelete('cascade');
             $table->timestamps();
             //relacion muchos a muchos con la tabla user
-            $table->foreign('user_id')
+            $table->foreign('userm_id')
           ->references('id')
-          ->on('users') 
-          ->onDelete('cascade'); 
-          
-          
-           
+          ->on('userms')
+          ->onDelete('cascade');
 
 
-            
+
+
+
+
         });
     }
 
