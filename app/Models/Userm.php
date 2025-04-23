@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class Userm extends Model
+
 {
     public function comment()
     {
@@ -42,5 +43,11 @@ class Userm extends Model
     {
         return $this->belongsToMany('App\Models\plant');
     }
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+    ];
+    
 
 }
